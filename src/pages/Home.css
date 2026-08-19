@@ -25,11 +25,11 @@
 
 .hero__name {
   display: block;
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
-  letter-spacing: 0.06em;
-  color: var(--white);
-  margin-bottom: 10px;
+  font-family: var(--font-script);
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: 6px;
 }
 
 .hero__title {
