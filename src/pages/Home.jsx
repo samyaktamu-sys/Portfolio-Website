@@ -13,6 +13,7 @@ export default function Home() {
         <div className="hero__sunburst sunburst" />
         <div className="container hero__inner">
           <div className="hero__copy">
+            <span className="hero__name">Samyak Jain</span>
             <span className="eyebrow">Quality &amp; Process Engineering</span>
             <h1 className="hero__title">
               I make processes <span>tell the truth.</span>
@@ -30,10 +31,13 @@ export default function Home() {
             </div>
           </div>
           <div className="hero__portrait">
-            <div className="hero__frame hard-shadow-gold">
-              <img src={mascotPhoto} alt="Samyak Jain, Texas A&M" />
+            <div className="hero__frame-wrap">
+              <div className="hero__frame hard-shadow-gold">
+                <img src={mascotPhoto} alt="Samyak Jain, Texas A&M" />
+              </div>
+              <span className="hero__ring badge badge-maroon">TEXAS A&amp;M · ISEN</span>
             </div>
-            <span className="hero__ring badge badge-maroon">TEXAS A&amp;M · ISEN</span>
+            <span className="hero__caption">Samyak Jain</span>
           </div>
         </div>
       </section>
