@@ -1,12 +1,15 @@
 import secondaryPhoto from '../assets/photos/secondary.jpg'
 import Recommendations from '../components/Recommendations'
 import useDocumentTitle from '../hooks/useDocumentTitle'
+import tamuLogo from '../assets/logos/tamu.png'
+import nmimsLogo from '../assets/logos/nmims.png'
+import ggsipuLogo from '../assets/logos/ggsipu.png'
 import './About.css'
 
 const education = [
-  { school: 'Texas A&M University, College Station, TX', degree: 'MS, Industrial Engineering', date: '05/2026' },
-  { school: 'Narsee Monjee Institute of Management Studies, India', degree: 'MBA', date: '02/2024' },
-  { school: 'Guru Gobind Singh Indraprastha University, India', degree: 'BS, Mechanical & Automation Engineering', date: '05/2021' },
+  { school: 'Texas A&M University, College Station, TX', degree: 'MS, Industrial Engineering', date: '05/2026', logo: tamuLogo },
+  { school: 'Narsee Monjee Institute of Management Studies, India', degree: 'MBA', date: '02/2024', logo: nmimsLogo },
+  { school: 'Guru Gobind Singh Indraprastha University, India', degree: 'BS, Mechanical & Automation Engineering', date: '05/2021', logo: ggsipuLogo },
 ]
 
 const experience = [
@@ -90,7 +93,12 @@ export default function About() {
         <div className="timeline">
           {education.map((e) => (
             <div className="timeline__item card" key={e.school}>
-              <span className="badge badge-maroon">{e.date}</span>
+              <div className="timeline__head">
+                <span className="timeline__logo">
+                  <img src={e.logo} alt={`${e.school} logo`} />
+                </span>
+                <span className="badge badge-maroon">{e.date}</span>
+              </div>
               <h4 className="timeline__degree">{e.degree}</h4>
               <p className="timeline__school">{e.school}</p>
             </div>
