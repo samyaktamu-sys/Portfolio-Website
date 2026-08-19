@@ -11,7 +11,7 @@ export default function Footer() {
           <p className="site-footer__sub">SPC · DMAIC · Moldflow DFM · Multivariate Process Analytics</p>
         </div>
         <ul className="site-footer__links">
-          <li><a href="mailto:samyak.nov@gmail.com">samyak.nov@gmail.com</a></li>
+          <li><a href="mailto:samyak.tamu@gmail.com">samyak.tamu@gmail.com</a></li>
           <li><a href="https://www.linkedin.com/in/samyak-delhi" target="_blank" rel="noreferrer">LinkedIn</a></li>
           <li><Link to="/contact">Contact Form →</Link></li>
         </ul>

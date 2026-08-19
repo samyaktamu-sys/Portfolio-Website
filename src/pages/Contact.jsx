@@ -41,7 +41,7 @@ export default function Contact() {
           through here.
         </p>
         <ul className="contact__direct">
-          <li><strong>Email</strong><a href="mailto:samyak.nov@gmail.com">samyak.nov@gmail.com</a></li>
+          <li><strong>Email</strong><a href="mailto:samyak.tamu@gmail.com">samyak.tamu@gmail.com</a></li>
           <li><strong>Phone</strong><span>(979) 575-9626</span></li>
           <li><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/samyak-delhi" target="_blank" rel="noreferrer">linkedin.com/in/samyak-delhi</a></li>
         </ul>
