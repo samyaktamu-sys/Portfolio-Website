@@ -37,7 +37,6 @@ export default function Home() {
               </div>
               <span className="hero__ring badge badge-maroon">TEXAS A&amp;M · ISEN</span>
             </div>
-            <span className="hero__caption">Samyak Jain</span>
           </div>
         </div>
       </section>

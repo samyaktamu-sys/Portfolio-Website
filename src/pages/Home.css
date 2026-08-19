@@ -92,14 +92,6 @@
   white-space: nowrap;
 }
 
-.hero__caption {
-  margin-top: 34px;
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  letter-spacing: 0.03em;
-  color: var(--cream);
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
