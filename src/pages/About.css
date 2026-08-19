@@ -1,0 +1,129 @@
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-hero__lead {
+  font-size: 1.1rem;
+  max-width: 62ch;
+}
+
+.about-hero__photo {
+  background: var(--white);
+  padding: 8px;
+  transform: rotate(2deg);
+}
+
+.about-hero__photo img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  filter: sepia(0.35) saturate(1.5) hue-rotate(-8deg) contrast(1.05);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.timeline__item .badge { margin-bottom: 12px; }
+
+.timeline__degree {
+  font-size: 1.15rem;
+  color: var(--maroon);
+  margin-bottom: 6px;
+}
+
+.timeline__school {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 14px;
+}
+
+.exp-item__rail {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.exp-item__rail::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: -30px;
+  width: 3px;
+  background: var(--maroon);
+}
+
+.exp-item:last-child .exp-item__rail::before { display: none; }
+
+.exp-item__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--line);
+  z-index: 1;
+}
+
+.exp-item__card { margin-bottom: 30px; }
+
+.exp-item__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.exp-item__head h4 {
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.exp-item__org {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  opacity: 0.65;
+  margin: 4px 0 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.skills-group {
+  font-size: 1.1rem;
+  color: var(--maroon);
+  margin-bottom: 14px;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 760px) {
+  .about-hero { grid-template-columns: 1fr; }
+  .about-hero__photo { max-width: 280px; }
+}

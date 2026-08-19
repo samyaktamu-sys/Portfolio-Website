@@ -1,0 +1,67 @@
+.pcard {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  padding: 24px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pcard:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0 var(--line);
+}
+
+.pcard__tag {
+  align-self: flex-start;
+  margin-bottom: 14px;
+}
+
+.pcard__title {
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.pcard__subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-bottom: 14px;
+}
+
+.pcard__headline {
+  font-family: var(--font-alt);
+  font-size: 1.3rem;
+  color: var(--maroon);
+  margin-bottom: 18px;
+}
+
+.pcard__stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+  border-top: 2px solid var(--line);
+  padding-top: 14px;
+}
+
+.pcard__stats strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.pcard__stats span {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.pcard__cta {
+  margin-top: auto;
+  font-family: var(--font-alt);
+  letter-spacing: 0.04em;
+  color: var(--maroon);
+  font-size: 1.05rem;
+}

@@ -1,0 +1,113 @@
+.pdeck-hero {
+  padding: 40px 0;
+  border-bottom: var(--border-w) solid var(--line);
+}
+
+.pdeck-hero__inner {
+  background: var(--maroon);
+  color: var(--white);
+  padding: 42px 36px;
+  max-width: 1092px;
+  margin: 0 auto;
+}
+
+.pdeck-hero__title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--white);
+  margin: 14px 0 6px;
+}
+
+.pdeck-hero__subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--cream);
+  opacity: 0.8;
+  margin-bottom: 14px;
+}
+
+.pdeck-hero__headline {
+  font-family: var(--font-alt);
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.pdeck-hero__meta {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  border-top: 2px solid rgba(255,255,255,0.25);
+  padding-top: 14px;
+}
+
+.pdeck-summary {
+  font-size: 1.15rem;
+  max-width: 78ch;
+  margin-bottom: 30px;
+}
+
+.pdeck-slides {
+  background: var(--cream);
+}
+
+.pdeck-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.pdeck-nav__card {
+  background: var(--white);
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--ink);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.pdeck-nav__card:hover {
+  transform: translate(-2px, -2px);
+  background: var(--cream);
+}
+
+.pdeck-nav__card--next {
+  grid-column: 2;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.pdeck-nav__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.pdeck-nav__card--next .pdeck-nav__body {
+  align-items: flex-end;
+}
+
+.pdeck-nav__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+  color: var(--maroon);
+  line-height: 1.15;
+}
+
+.pdeck-nav__arrow {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .pdeck-nav {
+    grid-template-columns: 1fr;
+  }
+  .pdeck-nav__card--next {
+    grid-column: 1;
+  }
+}
