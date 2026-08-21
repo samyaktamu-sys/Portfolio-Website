@@ -19,6 +19,31 @@
 
 .contact__direct li {
   display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact__icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  background: var(--gold);
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  box-shadow: 2px 2px 0 var(--line);
+}
+
+.contact__icon-badge svg {
+  width: 17px;
+  height: 17px;
+}
+
+.contact__direct-text {
+  display: flex;
   flex-direction: column;
   gap: 2px;
 }
@@ -32,6 +57,47 @@
 }
 
 .contact__direct a:hover { color: var(--maroon); }
+
+.contact__photo {
+  position: relative;
+  background: var(--white);
+  padding: 8px;
+  margin-top: 32px;
+  width: 260px;
+  max-width: 100%;
+  transform: rotate(-3deg);
+}
+
+.contact__photo img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: top;
+  filter: sepia(0.35) saturate(1.5) hue-rotate(-8deg) contrast(1.05);
+}
+
+.contact__quip {
+  top: -18px;
+  left: -20px;
+  transform: rotate(-8deg);
+  max-width: 170px;
+  font-size: 1.05rem;
+}
+
+.contact__burst {
+  top: -14px;
+  right: -14px;
+  width: 56px;
+  height: 56px;
+}
+
+.contact__photo-badge {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  white-space: nowrap;
+}
 
 .contact__form {
   display: flex;
@@ -84,4 +150,17 @@
 
 @media (max-width: 800px) {
   .contact { grid-template-columns: 1fr; }
+  .contact__quip {
+    top: -14px;
+    left: -8px;
+    font-size: 0.9rem;
+    max-width: 130px;
+    padding: 8px 10px 10px;
+  }
+  .contact__burst {
+    width: 42px;
+    height: 42px;
+    top: -10px;
+    right: -8px;
+  }
 }

@@ -7,6 +7,7 @@ import testPred from '../../assets/charts/mask/test_true_vs_pred.png'
 
 export const ml = {
   slug: 'ml-process-analytics',
+  featured: true,
   tag: 'Statistical Learning / Model Selection',
   title: 'Predicting Behavior: Lasso vs. RF vs. XGBoost',
   subtitle: '151 Predictors, LOOCV-Driven Model Comparison — Texas A&M ISEN 613',

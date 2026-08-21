@@ -1,5 +1,6 @@
 export const moldflow = {
   slug: 'moldflow-dfm-feasibility',
+  featured: true,
   tag: 'Moldflow / DFM / NPI',
   title: 'Hot-Runner DFM Feasibility Study',
   subtitle: '50+ Parts, Uno Minda Limited',

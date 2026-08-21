@@ -16,7 +16,7 @@ export default function ProjectCard({ project }) {
           </div>
         ))}
       </div>
-      <span className="pcard__cta">View Case Study →</span>
+      <span className="pcard__cta">View Project →</span>
     </Link>
   )
 }

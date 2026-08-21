@@ -39,7 +39,20 @@
   letter-spacing: 0.03em;
 }
 
+.site-footer__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .site-footer__links a:hover { color: var(--gold); }
+
+.site-footer__icon {
+  width: 16px;
+  height: 16px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
 
 .site-footer__legal {
   display: flex;

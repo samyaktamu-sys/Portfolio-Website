@@ -11,9 +11,23 @@
 }
 
 .about-hero__photo {
+  position: relative;
   background: var(--white);
   padding: 8px;
   transform: rotate(2deg);
+}
+
+.about-hero__quip {
+  top: -16px;
+  right: -18px;
+  transform: rotate(8deg);
+}
+
+.about-hero__burst {
+  bottom: -16px;
+  left: -16px;
+  width: 60px;
+  height: 60px;
 }
 
 .about-hero__photo img {
@@ -155,4 +169,17 @@
 @media (max-width: 760px) {
   .about-hero { grid-template-columns: 1fr; }
   .about-hero__photo { max-width: 280px; }
+  .about-hero__quip {
+    top: -14px;
+    right: -10px;
+    font-size: 1.05rem;
+    max-width: 120px;
+    padding: 8px 10px 10px;
+  }
+  .about-hero__burst {
+    width: 44px;
+    height: 44px;
+    bottom: -10px;
+    left: -10px;
+  }
 }

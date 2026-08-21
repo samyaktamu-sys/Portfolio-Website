@@ -59,6 +59,10 @@ p { line-height: 1.6; margin: 0 0 1em; }
   padding: 0 24px;
 }
 
+.container--wide {
+  max-width: 1320px;
+}
+
 /* ---------- Retro building blocks ---------- */
 
 .hard-shadow {
@@ -90,7 +94,7 @@ p { line-height: 1.6; margin: 0 0 1em; }
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-.btn:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--line); }
+.btn:hover { transform: translate(-2px, -2px) rotate(-1.5deg); box-shadow: 7px 7px 0 var(--line); }
 .btn:active { transform: translate(0, 0); box-shadow: 2px 2px 0 var(--line); }
 
 .btn-outline {
@@ -116,10 +120,13 @@ p { line-height: 1.6; margin: 0 0 1em; }
 }
 .eyebrow::before {
   content: "";
-  width: 22px;
-  height: 3px;
+  width: 11px;
+  height: 11px;
   background: var(--gold);
+  border: 2px solid var(--line);
   display: inline-block;
+  transform: rotate(45deg);
+  flex-shrink: 0;
 }
 
 .halftone {
@@ -160,9 +167,71 @@ p { line-height: 1.6; margin: 0 0 1em; }
 .badge-bad { background: var(--bad); color: var(--white); }
 .badge-gold { background: var(--gold); color: var(--ink); }
 .badge-maroon { background: var(--maroon); color: var(--white); }
+.badge-outline { background: var(--cream); color: var(--ink); }
+
+/* ---------- Photo quips ---------- */
+
+.quip-note {
+  position: absolute;
+  z-index: 2;
+  background: var(--gold);
+  border: 2px solid var(--line);
+  padding: 10px 14px 12px;
+  max-width: 150px;
+  font-family: var(--font-script);
+  font-size: 1.25rem;
+  line-height: 1.15;
+  color: var(--maroon-dark);
+  text-align: center;
+  box-shadow: 3px 3px 0 var(--line);
+}
+
+.quip-note::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--maroon);
+  border: 2px solid var(--line);
+}
+
+.comic-burst {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  z-index: 0;
+  pointer-events: none;
+  transform: rotate(-12deg);
+}
+
+.comic-burst::before,
+.comic-burst::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(50% 0%, 61% 20%, 80% 10%, 78% 32%, 100% 40%, 82% 55%, 92% 75%, 70% 73%, 65% 95%, 50% 80%, 35% 95%, 30% 73%, 8% 75%, 18% 55%, 0% 40%, 22% 32%, 20% 10%, 39% 20%);
+}
+
+.comic-burst::before {
+  background: var(--line);
+  transform: translate(5px, 5px);
+}
+
+.comic-burst::after {
+  background: var(--gold);
+}
+
+.comic-burst--maroon::after {
+  background: var(--maroon-bright);
+}
 
 .section {
-  padding: 88px 0;
+  padding-top: 88px;
+  padding-bottom: 88px;
   position: relative;
 }
 
@@ -171,6 +240,7 @@ p { line-height: 1.6; margin: 0 0 1em; }
   line-height: 1;
   color: var(--maroon);
   -webkit-text-stroke: 1.5px var(--line);
+  text-shadow: 3px 3px 0 var(--gold);
 }
 
 .divider {
@@ -219,12 +289,15 @@ p { line-height: 1.6; margin: 0 0 1em; }
 .stat-tile .sub {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  opacity: 0.55;
-  margin-top: 3px;
+  color: var(--maroon);
+  opacity: 0.8;
+  margin-top: 8px;
 }
 
 .card {
-  background: var(--white);
+  background-color: var(--white);
+  background-image: radial-gradient(circle, rgba(28,20,16,0.06) 1px, transparent 1px);
+  background-size: 11px 11px;
   border: var(--border-w) solid var(--line);
   box-shadow: 6px 6px 0 var(--line);
   border-radius: var(--radius);
@@ -240,6 +313,6 @@ p { line-height: 1.6; margin: 0 0 1em; }
 }
 
 @media (max-width: 640px) {
-  .section { padding: 56px 0; }
+  .section { padding-top: 56px; padding-bottom: 56px; }
   :root { --shadow-offset: 5px; }
 }

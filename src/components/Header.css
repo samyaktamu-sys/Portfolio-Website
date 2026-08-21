@@ -17,16 +17,17 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: var(--white);
+  will-change: transform, opacity;
 }
 
 .brand__badge {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--gold);
+  border: 2px solid var(--gold);
   flex-shrink: 0;
   filter: sepia(0.35) saturate(1.6) hue-rotate(-8deg) contrast(1.05);
 }
@@ -38,25 +39,12 @@
   object-position: center 15%;
 }
 
-.brand__text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.brand__text strong {
-  font-family: var(--font-alt);
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
-}
-
-.brand__text em {
-  font-family: var(--font-mono);
-  font-style: normal;
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.brand__name {
+  font-family: var(--font-script);
+  font-size: 1.7rem;
+  line-height: 1;
   color: var(--gold);
+  text-shadow: 2px 2px 0 var(--maroon-dark);
 }
 
 .site-nav ul {
@@ -74,19 +62,30 @@
   padding: 8px 14px;
   border-radius: var(--radius);
   border: 2px solid transparent;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
 
 .site-nav a:hover {
   border-color: var(--gold);
+  transform: translateY(-3px) rotate(-2deg);
+}
+
+.site-nav a:active {
+  transform: translateY(-1px) rotate(0deg) scale(0.95);
 }
 
 .site-nav a.active {
   background: var(--gold);
   color: var(--ink);
   border-color: var(--line);
+  transform: rotate(-1.5deg);
+}
+
+.site-nav a.active:hover {
+  transform: translateY(-3px) rotate(-1.5deg);
 }
 
 @media (max-width: 640px) {
-  .brand__text { display: none; }
+  .brand__name { font-size: 1.5rem; }
   .site-nav a { padding: 6px 9px; font-size: 0.92rem; }
 }
