@@ -101,7 +101,7 @@ function ImageSlide({ slide }) {
   return (
     <div className="deck-image">
       <div className="deck-image__frame hard-shadow">
-        <img src={slide.image} alt={slide.title} />
+        <img src={slide.image} alt={slide.title} loading="lazy" decoding="async" />
       </div>
       <p className="deck-slide__footnote">{slide.caption}</p>
     </div>
@@ -128,6 +128,91 @@ function TextSlide({ slide }) {
   return <p className="deck-slide__body deck-slide__body--lead">{slide.body}</p>
 }
 
+function OrgChartSlide({ slide }) {
+  return (
+    <>
+      {slide.body && <p className="deck-slide__body">{slide.body}</p>}
+      <div className="deck-orgchart">
+        <div className="deck-orgchart__root card hard-shadow">
+          <h4 className="deck-orgchart__root-label">{slide.root.label}</h4>
+          {slide.root.note && <p className="deck-orgchart__root-note">{slide.root.note}</p>}
+        </div>
+        <div className="deck-orgchart__trunk" />
+        <div className="deck-orgchart__branches">
+          {slide.branches.map((b) => (
+            <div className="deck-orgchart__branch card hard-shadow" key={b.label}>
+              <h4 className="deck-orgchart__branch-label">{b.label}</h4>
+              <ul className="deck-list">
+                {b.roles.map((r) => (
+                  <li key={r}>{r}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+      {slide.footnote && <p className="deck-slide__footnote">{slide.footnote}</p>}
+    </>
+  )
+}
+
+function Idef0Slide({ slide }) {
+  return (
+    <>
+      {slide.body && <p className="deck-slide__body">{slide.body}</p>}
+      <div className="deck-idef0">
+        <div className="deck-idef0__controls">
+          <span className="deck-idef0__zone-label">Controls</span>
+          <div className="deck-idef0__pills">
+            {slide.controls.map((c) => (
+              <span className="badge badge-maroon" key={c}>{c}</span>
+            ))}
+          </div>
+          <span className="deck-idef0__arrow deck-idef0__arrow--v">↓</span>
+        </div>
+
+        <div className="deck-idef0__row">
+          <div className="deck-idef0__inputs">
+            <span className="deck-idef0__zone-label">Inputs</span>
+            <div className="deck-idef0__pills deck-idef0__pills--col">
+              {slide.inputs.map((i) => (
+                <span className="badge badge-gold" key={i}>{i}</span>
+              ))}
+            </div>
+          </div>
+          <span className="deck-idef0__arrow">→</span>
+
+          <div className="deck-idef0__box hard-shadow">
+            <span className="deck-idef0__code">{slide.code}</span>
+            <span className="deck-idef0__fn">{slide.function}</span>
+          </div>
+
+          <span className="deck-idef0__arrow">→</span>
+          <div className="deck-idef0__outputs">
+            <span className="deck-idef0__zone-label">Outputs</span>
+            <div className="deck-idef0__pills deck-idef0__pills--col">
+              {slide.outputs.map((o) => (
+                <span className="badge badge-good" key={o}>{o}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="deck-idef0__mechanisms">
+          <span className="deck-idef0__arrow deck-idef0__arrow--v">↑</span>
+          <span className="deck-idef0__zone-label">Mechanisms</span>
+          <div className="deck-idef0__pills">
+            {slide.mechanisms.map((m) => (
+              <span className="badge badge-outline" key={m}>{m}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+      {slide.footnote && <p className="deck-slide__footnote">{slide.footnote}</p>}
+    </>
+  )
+}
+
 function CloseSlide({ slide }) {
   return (
     <ul className="deck-close">
@@ -141,6 +226,68 @@ function CloseSlide({ slide }) {
   )
 }
 
+function Idef0ChainSlide({ slide }) {
+  return (
+    <>
+      {slide.body && <p className="deck-slide__body">{slide.body}</p>}
+      {slide.controls && slide.controls.length > 0 && (
+        <div className="deck-idef0chain__controls">
+          <span className="deck-idef0chain__row-label">Controls — apply across every step</span>
+          <div className="deck-idef0chain__pills">
+            {slide.controls.map((c) => (
+              <span className="badge badge-maroon" key={c}>{c}</span>
+            ))}
+          </div>
+        </div>
+      )}
+      <div className="deck-idef0chain">
+        {slide.steps.map((s, i) => (
+          <div className="deck-idef0chain__step" key={s.code}>
+            <div className="deck-idef0chain__card hard-shadow">
+              <div className="deck-idef0chain__head">
+                <span className="deck-idef0chain__code">{s.code}</span>
+                <h4 className="deck-idef0chain__title">{s.title}</h4>
+              </div>
+              {s.inputs && s.inputs.length > 0 && (
+                <div className="deck-idef0chain__row">
+                  <span className="deck-idef0chain__row-label">Inputs</span>
+                  <div className="deck-idef0chain__pills">
+                    {s.inputs.map((v) => (
+                      <span className="badge badge-gold" key={v}>{v}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {s.outputs && s.outputs.length > 0 && (
+                <div className="deck-idef0chain__row">
+                  <span className="deck-idef0chain__row-label">Outputs</span>
+                  <div className="deck-idef0chain__pills">
+                    {s.outputs.map((v) => (
+                      <span className="badge badge-good" key={v}>{v}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {s.mechanisms && s.mechanisms.length > 0 && (
+                <div className="deck-idef0chain__row">
+                  <span className="deck-idef0chain__row-label">Mechanisms</span>
+                  <div className="deck-idef0chain__pills">
+                    {s.mechanisms.map((v) => (
+                      <span className="badge badge-outline" key={v}>{v}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            {i < slide.steps.length - 1 && <span className="deck-idef0chain__arrow">→</span>}
+          </div>
+        ))}
+      </div>
+      {slide.footnote && <p className="deck-slide__footnote">{slide.footnote}</p>}
+    </>
+  )
+}
+
 const renderers = {
   stats: StatsSlide,
   twocol: TwoColSlide,
@@ -149,13 +296,18 @@ const renderers = {
   text: TextSlide,
   close: CloseSlide,
   checklist: ChecklistSlide,
+  orgchart: OrgChartSlide,
+  idef0: Idef0Slide,
+  idef0chain: Idef0ChainSlide,
 }
+
+const WIDE_TYPES = new Set(['idef0chain'])
 
 export default function DeckSlide({ slide, index }) {
   const Renderer = renderers[slide.type] || TextSlide
   return (
     <section className="deck-slide">
-      <div className="container">
+      <div className={`container${WIDE_TYPES.has(slide.type) ? ' container--wide' : ''}`}>
         <div className="deck-slide__head">
           <span className="deck-slide__index">{String(index + 1).padStart(2, '0')}</span>
           <div>

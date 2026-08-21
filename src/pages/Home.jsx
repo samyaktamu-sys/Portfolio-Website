@@ -1,75 +1,95 @@
 import { Link } from 'react-router-dom'
-import { projects } from '../data/projects'
+import { featuredProjects } from '../data/projects'
 import ProjectCard from '../components/ProjectCard'
 import mascotPhoto from '../assets/photos/mascot-primary.jpg'
-import useDocumentTitle from '../hooks/useDocumentTitle'
+import useScrollProgress from '../hooks/useScrollProgress'
 import './Home.css'
 
 export default function Home() {
-  useDocumentTitle('Samyak Jain — Quality & Process Engineering')
+  const progress = useScrollProgress(40, 260)
   return (
     <>
       <section className="hero halftone">
         <div className="hero__sunburst sunburst" />
         <div className="container hero__inner">
           <div className="hero__copy">
-            <span className="hero__name">Samyak Jain</span>
+            <span
+              className="hero__name"
+              style={{
+                opacity: 1 - progress,
+                transform: `translateY(${-progress * 16}px) scale(${1 - 0.08 * progress})`,
+              }}
+            >
+              Samyak Jain
+            </span>
             <span className="eyebrow">Quality &amp; Process Engineering</span>
             <h1 className="hero__title">
               I make processes <span>tell the truth.</span>
             </h1>
             <p className="hero__lead">
-              SPC, DMAIC, and multivariate process analytics — turning 80% yield into 99.4%,
-              settling cross-functional standoffs with Moldflow data, and building the
-              control systems that keep the fix in place after I walk away.
+              3+ years turning shaky manufacturing lines into processes that run
+              themselves — SPC, DMAIC, the numbers to back it up. Don't take my
+              word for it, look at the work.
             </p>
             <div className="hero__cta">
-              <Link to="/projects" className="btn btn-gold">See the Case Studies</Link>
+              <Link to="/projects" className="btn btn-gold">See the Projects</Link>
               <a href="/resume/Samyak_Jain_Resume.pdf" className="btn btn-outline" target="_blank" rel="noreferrer">
                 Download Résumé
               </a>
             </div>
           </div>
           <div className="hero__portrait">
-            <div className="hero__frame-wrap">
+            <div
+              className="hero__frame-wrap"
+              style={{
+                opacity: 1 - progress,
+                transform: `translateY(${-progress * 16}px) scale(${1 - 0.08 * progress})`,
+              }}
+            >
+              <div className="comic-burst hero__burst" aria-hidden="true" />
               <div className="hero__frame hard-shadow-gold">
-                <img src={mascotPhoto} alt="Samyak Jain, Texas A&M" />
+                <img src={mascotPhoto} alt="Samyak Jain, Texas A&M" fetchPriority="high" decoding="async" />
               </div>
               <span className="hero__ring badge badge-maroon">TEXAS A&amp;M · ISEN</span>
+              <div className="quip-note hero__quip">First impressions: Cpk 1.33, minimum.</div>
             </div>
           </div>
         </div>
       </section>
 
       <section className="section container">
-        <div className="stat-grid">
-          <div className="stat-tile">
-            <div className="value">80% → 99.4%</div>
-            <div className="label">First-Pass Yield</div>
+        <span className="eyebrow">Experience</span>
+        <h2 className="section-title" style={{ marginBottom: 30 }}>What I've Done</h2>
+        <div className="home-experience">
+          <div className="home-experience__group">
+            <h3 className="home-experience__role">Senior Industrial Engineer, Utility Power Systems</h3>
+            <ul className="deck-list">
+              <li>Recovered process capability (Cpk 0.46 → 1.49) via DMAIC/8D, raising pipe-bending FPY from 80% to 99.4%.</li>
+              <li>Reduced raw material and WIP inventory from 60 to 15 days, freeing ~$480K in working capital.</li>
+            </ul>
           </div>
-          <div className="stat-tile">
-            <div className="value">0.46 → 1.49</div>
-            <div className="label">Process Capability (Cpk)</div>
-          </div>
-          <div className="stat-tile">
-            <div className="value">$150K/yr</div>
-            <div className="label">Scrap &amp; Rework Eliminated</div>
-          </div>
-          <div className="stat-tile">
-            <div className="value">50+</div>
-            <div className="label">Parts DFM-Screened</div>
+          <div className="home-experience__group">
+            <h3 className="home-experience__role">Senior Engineer, Uno Minda Limited</h3>
+            <ul className="deck-list">
+              <li>Used Moldflow/DFM/DFMEA on injection-molded components to catch flow, cooling, and warpage risk pre-tooling.</li>
+              <li>Led pilot assembly-line/workstation layout improvements, cutting operator cycle time ~30%.</li>
+            </ul>
           </div>
         </div>
+        <Link to="/about" className="home-experience__more">See Full Experience →</Link>
       </section>
 
       <section className="section container">
         <span className="eyebrow">Featured Work</span>
-        <h2 className="section-title" style={{ marginBottom: 36 }}>Case Studies</h2>
+        <h2 className="section-title" style={{ marginBottom: 36 }}>Key Projects</h2>
         <div className="projects-grid">
-          {projects.map((p) => (
+          {featuredProjects.map((p) => (
             <ProjectCard project={p} key={p.slug} />
           ))}
         </div>
+        <Link to="/projects" className="home-experience__more" style={{ marginTop: 28, display: 'inline-block' }}>
+          See All Projects →
+        </Link>
       </section>
 
       <section className="section container cta-band hard-shadow">

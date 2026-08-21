@@ -1,6 +1,5 @@
 import secondaryPhoto from '../assets/photos/secondary.jpg'
 import Recommendations from '../components/Recommendations'
-import useDocumentTitle from '../hooks/useDocumentTitle'
 import tamuLogo from '../assets/logos/tamu.png'
 import nmimsLogo from '../assets/logos/nmims.png'
 import ggsipuLogo from '../assets/logos/ggsipu.png'
@@ -65,7 +64,6 @@ const skills = [
 ]
 
 export default function About() {
-  useDocumentTitle('About — Samyak Jain')
   return (
     <>
       <section className="section container about-hero">
@@ -83,7 +81,9 @@ export default function About() {
           </p>
         </div>
         <div className="about-hero__photo hard-shadow-gold">
+          <div className="comic-burst comic-burst--maroon about-hero__burst" aria-hidden="true" />
           <img src={secondaryPhoto} alt="Samyak Jain at Texas A&M" />
+          <div className="quip-note about-hero__quip">Born to a process. Raised on Six Sigma.</div>
         </div>
       </section>
 
@@ -95,7 +95,7 @@ export default function About() {
             <div className="timeline__item card" key={e.school}>
               <div className="timeline__head">
                 <span className="timeline__logo">
-                  <img src={e.logo} alt={`${e.school} logo`} />
+                  <img src={e.logo} alt={`${e.school} logo`} loading="lazy" decoding="async" />
                 </span>
                 <span className="badge badge-maroon">{e.date}</span>
               </div>
