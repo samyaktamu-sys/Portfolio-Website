@@ -1,5 +1,6 @@
 export const baja = {
   slug: 'baja-sae-brake-rollcage',
+  datePublished: '2020',
   tag: 'CAE / FEA / Vehicle Design',
   title: 'BAJA SAE — Brakes & Roll Cage',
   subtitle: 'Collegiate Off-Road Vehicle Team, 2019–2020',

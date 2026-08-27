@@ -1,5 +1,6 @@
 export const forecasting = {
   slug: 'airline-passenger-forecasting',
+  datePublished: '2025',
   tag: 'Time Series / Demand Forecasting',
   title: 'Airline Passenger Demand Forecasting',
   subtitle: 'Seasonal-Trend Model vs. Moving Averages — Texas A&M ISEN 615',

@@ -6,6 +6,7 @@ import cpk from '../../assets/charts/fpy/cpk_before_after.png'
 export const fpy = {
   slug: 'fpy-spc-improvement',
   featured: true,
+  datePublished: '2023',
   tag: 'SPC / DMAIC',
   title: 'First-Pass Yield Recovery',
   subtitle: 'Pipe Bending Line, Utility Power Systems',

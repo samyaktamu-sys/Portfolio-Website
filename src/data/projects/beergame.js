@@ -1,5 +1,6 @@
 export const beergame = {
   slug: 'beer-game-bullwhip',
+  datePublished: '2025',
   tag: 'Bullwhip Effect / Supply Chain Simulation',
   title: 'Beer Game: Diagnosing the Bullwhip Effect',
   subtitle: 'Beer Distribution Game Simulation — Texas A&M ISEN 645',

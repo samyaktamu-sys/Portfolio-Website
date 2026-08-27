@@ -14,7 +14,7 @@ export default function Home() {
         <div className="hero__sunburst sunburst" />
         <div className="container hero__inner">
           <div className="hero__copy">
-            <span
+            <h1
               className="hero__name"
               style={{
                 opacity: 1 - progress,
@@ -22,11 +22,11 @@ export default function Home() {
               }}
             >
               Samyak Jain
-            </span>
-            <span className="eyebrow">Quality &amp; Process Engineering</span>
-            <h1 className="hero__title">
-              I make processes <span>tell the truth.</span>
             </h1>
+            <span className="eyebrow">Quality &amp; Process Engineering</span>
+            <p className="hero__title">
+              I make processes <span>tell the truth.</span>
+            </p>
             <p className="hero__lead">
               3+ years turning shaky manufacturing lines into processes that run
               themselves — SPC, DMAIC, the numbers to back it up. Don't take my

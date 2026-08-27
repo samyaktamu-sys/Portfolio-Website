@@ -7,6 +7,7 @@ import pc1Bonferroni from '../../assets/charts/mspc/pc1_bonferroni.png'
 export const mspc = {
   slug: 'mspc-pca-monitoring',
   featured: true,
+  datePublished: '2025',
   tag: 'Multivariate SPC / PCA',
   title: 'Multivariate Process Monitoring',
   subtitle: 'PCA-Based Outlier Removal, 209-Variable Process — Texas A&M ISEN 614',

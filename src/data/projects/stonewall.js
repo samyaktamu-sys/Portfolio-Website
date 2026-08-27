@@ -1,5 +1,6 @@
 export const stonewall = {
   slug: 'stonewall-systems-engineering',
+  datePublished: '2025',
   tag: 'IDEF0 / VSM / Balanced Scorecard',
   title: 'Organizational Design for a Startup Manufacturer',
   subtitle: 'Stonewall Supply Inc. Case Study — Texas A&M ISEN 663',

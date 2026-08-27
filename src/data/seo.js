@@ -87,10 +87,25 @@ const personSchema = {
   jobTitle: 'Quality & Process Engineer',
   description:
     'Quality & Process Engineer specializing in statistical process control, DMAIC problem solving, and multivariate process analytics, with ISO 9001 and IATF 16949 internal-auditor credentials.',
+  // Add any additional public profiles (GitHub, ORCID, personal domain) here —
+  // more verified sameAs links strengthen entity disambiguation in search.
   sameAs: [LINKEDIN_URL],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'College Station',
+    addressRegion: 'TX',
+    addressCountry: 'US',
+  },
   homeLocation: {
     '@type': 'Place',
     address: { '@type': 'PostalAddress', addressLocality: 'College Station', addressRegion: 'TX', addressCountry: 'US' },
+  },
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Quality & Process Engineer',
+    occupationalCategory: '17-2112.00', // O*NET-SOC — Industrial Engineers
+    skills:
+      'Statistical process control, DMAIC, ISO 9001 and IATF 16949 internal auditing, APQP, PPAP, manufacturing control plans, DFMEA/PFMEA, GD&T, process capability analysis, discrete-event simulation.',
   },
   alumniOf: [
     { '@type': 'CollegeOrUniversity', name: 'Texas A&M University', sameAs: 'https://www.tamu.edu/' },
@@ -112,6 +127,27 @@ const personSchema = {
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: 'certificate',
       name: 'IATF 16949 Internal Auditor',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      educationalLevel: "Master's degree",
+      name: 'MS, Industrial Engineering',
+      recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Texas A&M University' },
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      educationalLevel: "Master's degree",
+      name: 'MBA',
+      recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Narsee Monjee Institute of Management Studies' },
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      educationalLevel: "Bachelor's degree",
+      name: 'BS, Mechanical & Automation Engineering',
+      recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Guru Gobind Singh Indraprastha University' },
     },
   ],
   knowsAbout: [
@@ -167,6 +203,14 @@ function projectSchema(project) {
     description: projectDescriptions[project.slug] || trim(project.summary),
     abstract: project.summary,
     url: abs(`/projects/${project.slug}`),
+    mainEntityOfPage: abs(`/projects/${project.slug}`),
+    image: OG_IMAGE,
+    inLanguage: 'en-US',
+    articleSection: project.tag.split(' / ')[0],
+    ...(project.datePublished && {
+      datePublished: project.datePublished,
+      dateModified: project.datePublished,
+    }),
     author: { '@id': PERSON_ID },
     publisher: { '@id': PERSON_ID },
     isPartOf: { '@id': `${SITE_URL}/#website` },
@@ -253,6 +297,8 @@ export function resolveMeta(pathname) {
       path,
       title: `${project.title} — ${AUTHOR}`,
       description: projectDescriptions[project.slug] || trim(project.summary),
+      articleSection: project.tag.split(' / ')[0],
+      datePublished: project.datePublished,
       graph: [
         personSchema,
         websiteSchema,
@@ -306,13 +352,32 @@ export function seoTags(pathname) {
     { el: 'meta', attrs: { property: 'og:title', content: meta.title } },
     { el: 'meta', attrs: { property: 'og:description', content: meta.description } },
     { el: 'meta', attrs: { property: 'og:image', content: OG_IMAGE } },
+    { el: 'meta', attrs: { property: 'og:image:type', content: 'image/jpeg' } },
+    { el: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
+    { el: 'meta', attrs: { property: 'og:image:height', content: '630' } },
     { el: 'meta', attrs: { property: 'og:image:alt', content: `${AUTHOR} — Quality & Process Engineering portfolio` } },
 
     { el: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
     { el: 'meta', attrs: { name: 'twitter:title', content: meta.title } },
     { el: 'meta', attrs: { name: 'twitter:description', content: meta.description } },
     { el: 'meta', attrs: { name: 'twitter:image', content: OG_IMAGE } },
+    { el: 'meta', attrs: { name: 'twitter:image:alt', content: `${AUTHOR} — Quality & Process Engineering portfolio` } },
   ]
+
+  // Article-namespace tags for the project case studies (og:type is already
+  // 'article' for these paths).
+  if (meta.path.startsWith('/projects/')) {
+    tags.push(
+      { el: 'meta', attrs: { property: 'article:author', content: AUTHOR } },
+      { el: 'meta', attrs: { property: 'article:section', content: meta.articleSection || 'Case Study' } },
+    )
+    if (meta.datePublished) {
+      tags.push(
+        { el: 'meta', attrs: { property: 'article:published_time', content: meta.datePublished } },
+        { el: 'meta', attrs: { property: 'article:modified_time', content: meta.datePublished } },
+      )
+    }
+  }
 
   if (meta.graph.length) {
     tags.push({
