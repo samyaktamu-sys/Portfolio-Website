@@ -5,8 +5,9 @@ import { ml } from './ml'
 import { stonewall } from './stonewall'
 import { beergame } from './beergame'
 import { forecasting } from './forecasting'
+import { baja } from './baja'
 
-export const projects = [fpy, moldflow, mspc, ml, stonewall, beergame, forecasting]
+export const projects = [fpy, moldflow, mspc, ml, stonewall, beergame, forecasting, baja]
 
 export const featuredProjects = projects.filter((p) => p.featured)
 

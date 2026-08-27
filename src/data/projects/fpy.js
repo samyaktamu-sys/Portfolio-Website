@@ -6,14 +6,14 @@ import cpk from '../../assets/charts/fpy/cpk_before_after.png'
 export const fpy = {
   slug: 'fpy-spc-improvement',
   featured: true,
-  tag: 'SPC / DMAIC / 8D',
+  tag: 'SPC / DMAIC',
   title: 'First-Pass Yield Recovery',
   subtitle: 'Pipe Bending Line, Utility Power Systems',
   headline: '80% → 99.4% First-Pass Yield',
-  role: 'Senior Quality / Process Engineer — 8D Team Lead',
+  role: 'Senior Engineer — DMAIC / SPC',
   company: 'Utility Power Systems, Delhi, India',
   summary:
-    'A high-volume pipe hot-bending line was scrapping 1 in 5 parts. I led the 8D/DMAIC investigation, found two verified physical root causes, and built a closed-loop digital SPC system so the fix would hold after I rolled off the project.',
+    'A high-volume pipe hot-bending line was scrapping 1 in 5 parts. I led the DMAIC investigation, found two verified physical root causes, and built a closed-loop digital SPC system so the fix would hold after I rolled off the project.',
   heroStats: [
     { value: '80% → 99.4%', label: 'First-Pass Yield' },
     { value: '0.46 → 1.49', label: 'Cpk' },
@@ -35,7 +35,7 @@ export const fpy = {
     },
     {
       type: 'twocol',
-      eyebrow: 'Containment — 8D D1–D3',
+      eyebrow: 'Measure — Contain First',
       title: 'Rigor before action',
       left: {
         heading: 'What we did first',
@@ -43,7 +43,7 @@ export const fpy = {
           'Quarantined affected batches for 100% offline inspection',
           'Froze uncontrolled parameter changes on the floor',
           'Ran an MSA before trusting any measurement data',
-          'Pulled a cross-functional 8D team: me, line techs, maintenance',
+          'Pulled a cross-functional team: me, line techs, maintenance',
         ],
       },
       right: {

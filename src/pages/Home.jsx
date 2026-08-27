@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { featuredProjects } from '../data/projects'
 import ProjectCard from '../components/ProjectCard'
+import Certifications from '../components/Certifications'
 import mascotPhoto from '../assets/photos/mascot-primary.jpg'
 import useScrollProgress from '../hooks/useScrollProgress'
 import './Home.css'
@@ -57,15 +58,17 @@ export default function Home() {
         </div>
       </section>
 
+      <Certifications />
+
       <section className="section container">
         <span className="eyebrow">Experience</span>
         <h2 className="section-title" style={{ marginBottom: 30 }}>What I've Done</h2>
         <div className="home-experience">
           <div className="home-experience__group">
-            <h3 className="home-experience__role">Senior Industrial Engineer, Utility Power Systems</h3>
+            <h3 className="home-experience__role">Senior Engineer, Utility Power Systems</h3>
             <ul className="deck-list">
-              <li>Recovered process capability (Cpk 0.46 → 1.49) via DMAIC/8D, raising pipe-bending FPY from 80% to 99.4%.</li>
-              <li>Reduced raw material and WIP inventory from 60 to 15 days, freeing ~$480K in working capital.</li>
+              <li>Recovered process capability (Cpk 0.46 → 1.49) on the pipe-bending line via DMAIC and closed-loop SPC, lifting first-pass yield from 80% to 99.4% and eliminating ~$150K/yr in scrap.</li>
+              <li>Implemented ISO 9001 Clause 8–10 controls during a facility migration — control plans, in-process inspection points, and the internal audit schedule to hold conformance.</li>
             </ul>
           </div>
           <div className="home-experience__group">

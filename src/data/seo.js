@@ -27,13 +27,13 @@ const pages = {
   '/about': {
     title: 'About Samyak Jain — Six Sigma Green Belt, MS IE Texas A&M',
     description:
-      'Six Sigma Green Belt, MS Industrial Engineering at Texas A&M. Background in SPC, DMAIC, line balancing, capacity modeling, and process simulation.',
+      'ISO 9001 / IATF 16949 internal auditor and Six Sigma Green Belt, MS Industrial Engineering at Texas A&M. SPC, DMAIC, APQP/PPAP, and control plans.',
     priority: '0.8',
   },
   '/projects': {
     title: 'Projects — SPC, DMAIC & Process Engineering Case Studies',
     description:
-      'Seven case studies in statistical process control, DMAIC, DFM simulation, and multivariate analytics — first-pass yield recovery, Moldflow, PCA monitoring.',
+      'Eight case studies in SPC, DMAIC, DFM and structural simulation, and multivariate analytics — yield recovery, Moldflow, roll-cage FEA, and PCA monitoring.',
     priority: '0.9',
   },
   '/contact': {
@@ -48,7 +48,7 @@ const pages = {
 // (~155 chars). Falls back to a trimmed project summary if a slug is missing.
 const projectDescriptions = {
   'fpy-spc-improvement':
-    '8D/DMAIC case study: pipe-bending first-pass yield from 80% to 99.4%, Cpk from 0.46 to 1.49, held by a closed-loop SPC system. $150K/yr of scrap removed.',
+    'DMAIC case study: pipe-bending first-pass yield from 80% to 99.4%, Cpk from 0.46 to 1.49, held by a closed-loop SPC system. $150K/yr of scrap removed.',
   'moldflow-dfm-feasibility':
     'Moldflow DFM study across 50+ injection-molded parts — six simulation checks for warpage, weld line, and cooling risk settled a cold vs. hot runner call.',
   'mspc-pca-monitoring':
@@ -61,6 +61,8 @@ const projectDescriptions = {
     'Beer Distribution Game case study on the bullwhip effect — how a 523-unit demand blip became 1,000-unit order swings across four supply chain echelons.',
   'airline-passenger-forecasting':
     'Time series forecasting case study: five methods compared on the Box-Jenkins airline series, cutting MAPE from 12.06% to 4.76% with a seasonal-trend model.',
+  'baja-sae-brake-rollcage':
+    "Undergraduate BAJA SAE case study: hydraulic brake system design in SolidWorks and Ansys roll-cage FEA against the rulebook's impact and rollover load cases.",
 }
 
 function trim(text, max = 158) {
@@ -84,7 +86,7 @@ const personSchema = {
   email: `mailto:${EMAIL}`,
   jobTitle: 'Quality & Process Engineer',
   description:
-    'Quality & Process Engineer specializing in statistical process control, DMAIC problem solving, and multivariate process analytics.',
+    'Quality & Process Engineer specializing in statistical process control, DMAIC problem solving, and multivariate process analytics, with ISO 9001 and IATF 16949 internal-auditor credentials.',
   sameAs: [LINKEDIN_URL],
   homeLocation: {
     '@type': 'Place',
@@ -95,22 +97,42 @@ const personSchema = {
     { '@type': 'CollegeOrUniversity', name: 'Narsee Monjee Institute of Management Studies' },
     { '@type': 'CollegeOrUniversity', name: 'Guru Gobind Singh Indraprastha University' },
   ],
-  hasCredential: {
-    '@type': 'EducationalOccupationalCredential',
-    credentialCategory: 'certificate',
-    name: 'Six Sigma Green Belt',
-  },
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'certificate',
+      name: 'Six Sigma Green Belt',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'certificate',
+      name: 'ISO 9001 Internal Auditor',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'certificate',
+      name: 'IATF 16949 Internal Auditor',
+    },
+  ],
   knowsAbout: [
     'Statistical Process Control',
     'DMAIC',
     'Six Sigma',
-    '8D Problem Solving',
+    'Quality Management Systems (ISO 9001)',
+    'IATF 16949',
+    'Internal Quality Auditing',
+    'APQP',
+    'PPAP',
+    'Manufacturing Control Plans',
+    'FMEA (DFMEA / PFMEA)',
+    'GD&T',
     'Root Cause Analysis',
     'Process Capability (Cpk)',
     'First-Pass Yield Improvement',
     'Multivariate Statistical Process Control',
     'Design for Manufacturability',
     'Discrete-Event Simulation',
+    'Finite Element Analysis',
     'Lean Manufacturing',
   ],
 }

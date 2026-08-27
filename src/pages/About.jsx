@@ -20,17 +20,19 @@ const experience = [
       'Supported fume hood installation/maintenance, verifying airflow and safety performance after commissioning.',
       'Operated glovebox systems in ISO-classified controlled environments, enforcing contamination-control protocols.',
       'Led a materials safety upgrade replacing mercury bubblers with sand-based alternatives, zero disruption to ops.',
+      'Ran routine inspections, preventive maintenance, and documentation for controlled-environment equipment to hold departmental compliance.',
     ],
   },
   {
-    role: 'Senior Industrial Engineer — Process Improvement',
+    role: 'Senior Engineer',
     org: 'Utility Power Systems, Delhi, India',
     date: '01/2023 – 07/2024',
     bullets: [
-      'Recovered process capability (Cpk 0.46 → 1.49) via DMAIC/8D, raising pipe-bending FPY from 80% to 99.4%.',
-      'Owned manufacturing readiness for transferred product lines during a facility migration.',
-      'Built a JaamSim discrete-event simulation model for layout, buffer, and staffing scenario analysis.',
-      'Reduced raw material and WIP inventory from 60 to 15 days, freeing ~$480K in working capital.',
+      'Recovered process capability (Cpk 0.46 → 1.49) on the pipe-bending line via DMAIC and closed-loop SPC, lifting FPY from 80% to 99.4% and eliminating ~$150K/yr in scrap.',
+      'Implemented ISO 9001 Clause 8–10 controls during a facility migration — built the manufacturing control plans and internal audit schedule (inspection points, reaction plans, audit frequency) with ops and quality on the floor.',
+      'Redesigned workstations with OSHA-aligned machine guarding, ergonomics, and PPE/hazard communication as part of a motion study, cutting end-to-end lead time ~20%.',
+      'Planned plant and line layouts in AutoCAD and built a FlexSim discrete-event model with PFMEA-informed downtime modes for bottleneck and capacity analysis.',
+      'Wrote SOPs and standard work for welding, blasting, galvanization, and powder coating under ISO 9001 Clause 8.5; applied GD&T to review fabrication drawings.',
       'Built Power BI dashboards for FPY, OEE, inventory, defects, and on-time delivery.',
     ],
   },
@@ -39,9 +41,12 @@ const experience = [
     org: 'Uno Minda Limited, Haryana, India',
     date: '01/2022 – 01/2023',
     bullets: [
-      'Supported launch of high-volume motorcycle switch assemblies for Yamaha, Suzuki, and Piaggio.',
-      'Led pilot assembly-line/workstation layout improvements, cutting operator cycle time ~30%.',
-      'Used Moldflow/DFM/DFMEA on injection-molded components to catch flow, cooling, and warpage risk pre-tooling.',
+      'Supported APQP/PPAP launch of high-volume motorcycle switch assemblies for Yamaha, Suzuki, and Piaggio, coordinating design, manufacturing, quality, logistics, and suppliers.',
+      'Designed a pilot production line to IATF 16949 process requirements, translating design specs into repeatable workstation setups and cutting operator cycle time ~30%.',
+      'Reviewed 25+ assembly lines for IATF 16949 conformance ahead of certification, and managed ECN and SAP configuration to keep BOMs and routings aligned with design intent.',
+      'Ran DFMEA/PFMEA across 8 designs, catching 20+ potential failure modes and cutting design-stage issues ~30% before tooling release.',
+      'Used Moldflow and DFM reviews on 100+ injection-molded components to catch flow, cooling, and warpage risk pre-tooling.',
+      'Designed wire-harness routing and layout for the switch assemblies — connector and terminal selection, crimp specification, and end-of-line continuity and pull-force testing.',
       'Executed 37 Kaizen and Lean initiatives, contributing to a 4–5% cost reduction in targeted assemblies.',
     ],
   },
@@ -57,10 +62,13 @@ const experience = [
 ]
 
 const skills = [
-  { group: 'Industrial Engineering', items: ['Line/plant layouts', 'Capacity modeling', 'Time studies', 'Line balancing', 'PFEP', 'Material-flow planning'] },
-  { group: 'Continuous Improvement', items: ['Six Sigma Green Belt', 'DMAIC', 'SPC', 'PDCA', 'Root-cause analysis', 'FPY improvement'] },
-  { group: 'Simulation & Analytics', items: ['JaamSim', 'FlexSim', 'Power BI', 'Python', 'SQL', 'Minitab', 'Tableau'] },
-  { group: 'Systems & Design', items: ['AutoCAD', 'SolidWorks', 'SAP', 'Moldflow'] },
+  { group: 'Standards & Compliance', items: ['ISO 9001 Internal Auditor', 'IATF 16949 Internal Auditor', 'OSHA-aligned machine guarding', 'Ergonomics', 'PPE / hazard communication'] },
+  { group: 'Quality & Problem Solving', items: ['APQP', 'PPAP', 'Manufacturing control plans', 'Internal audit scheduling', 'DFMEA', 'PFMEA', 'DMAIC', 'SPC', 'Root-cause analysis', 'GD&T', 'Cpk / FPY improvement'] },
+  { group: 'Continuous Improvement', items: ['Six Sigma Green Belt', 'PMP (in progress)', 'Kaizen', 'Lean Manufacturing', 'PDCA', 'Just-in-Time'] },
+  { group: 'Industrial Engineering', items: ['Line/plant layouts', 'Capacity modeling', 'Time studies', 'Line balancing', 'Workstation design', 'PFEP', 'Material-flow planning'] },
+  { group: 'Simulation & Analytics', items: ['FlexSim', 'JaamSim', 'Power BI', 'Excel (advanced)', 'Python', 'SQL', 'Minitab', 'Tableau'] },
+  { group: 'Systems & Design', items: ['SolidWorks', 'AutoCAD', 'CATIA', 'Ansys', 'SAP', 'Moldflow'] },
+  { group: 'Manufacturing Processes', items: ['High-volume assembly', 'Wire-harness assembly', 'Welding', 'Bending / forming', 'Blasting', 'Galvanization', 'Powder coating', 'Injection molding', '3D-printed fixtures'] },
 ]
 
 export default function About() {
@@ -73,11 +81,12 @@ export default function About() {
             Quality engineering, not vibes.
           </h1>
           <p className="about-hero__lead">
-            I'm a Quality &amp; Process Engineer finishing my MS in Industrial Engineering
-            at Texas A&M. Six Sigma Green Belt, three-plus years turning shaky manufacturing
-            processes into ones that police themselves — SPC dashboards, DMAIC investigations,
-            Moldflow DFM screens, and the occasional multivariate model when a spreadsheet
-            isn't rigorous enough.
+            I'm a Quality &amp; Process Engineer with an MS in Industrial Engineering
+            from Texas A&M. Six Sigma Green Belt and ISO 9001 / IATF 16949 internal
+            auditor, three-plus years turning shaky manufacturing processes into ones
+            that police themselves — SPC dashboards, DMAIC investigations, APQP/PPAP
+            launches, Moldflow DFM screens, and the occasional multivariate model when
+            a spreadsheet isn't rigorous enough.
           </p>
         </div>
         <div className="about-hero__photo hard-shadow-gold">
