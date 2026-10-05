@@ -11,9 +11,10 @@ export default function Projects() {
           <span className="eyebrow">Portfolio</span>
           <h1 className="section-title" style={{ marginBottom: 16 }}>Projects</h1>
           <p style={{ maxWidth: '68ch', fontSize: '1.05rem' }}>
-            Projects spanning shop-floor SPC, cross-functional DFM screening,
-            graduate-level multivariate statistics, and early CAE work — each one
-            built out as a full case study below, not just a summary card.
+            Work projects from the shop floor (yield recovery, a pilot line launch,
+            a capacity case through equipment sign-off), followed by analytics
+            and coursework: neural networks, demand forecasting, multivariate SPC,
+            and early CAE. Each one is a full case study, not just a summary card.
           </p>
         </div>
         <div className="projects-hero__photo hard-shadow-gold">

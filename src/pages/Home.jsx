@@ -23,14 +23,14 @@ export default function Home() {
             >
               Samyak Jain
             </h1>
-            <span className="eyebrow">Quality &amp; Process Engineering</span>
+            <span className="eyebrow">Manufacturing &amp; Quality Engineering</span>
             <p className="hero__title">
               I make processes <span>tell the truth.</span>
             </p>
             <p className="hero__lead">
-              3+ years turning shaky manufacturing lines into processes that run
-              themselves — SPC, DMAIC, the numbers to back it up. Don't take my
-              word for it, look at the work.
+              3+ years across manufacturing engineering and lab roles: automotive
+              launches, SPC and DMAIC on the shop floor, and the numbers to back
+              it up. Don't take my word for it, look at the work.
             </p>
             <div className="hero__cta">
               <Link to="/projects" className="btn btn-gold">See the Projects</Link>
@@ -65,17 +65,17 @@ export default function Home() {
         <h2 className="section-title" style={{ marginBottom: 30 }}>What I've Done</h2>
         <div className="home-experience">
           <div className="home-experience__group">
-            <h3 className="home-experience__role">Senior Engineer, Utility Power Systems</h3>
+            <h3 className="home-experience__role">Project Engineer, Utility Power Systems</h3>
             <ul className="deck-list">
-              <li>Recovered process capability (Cpk 0.46 → 1.49) on the pipe-bending line via DMAIC and closed-loop SPC, lifting first-pass yield from 80% to 99.4% and eliminating ~$150K/yr in scrap.</li>
-              <li>Implemented ISO 9001 Clause 8–10 controls during a facility migration — control plans, in-process inspection points, and the internal audit schedule to hold conformance.</li>
+              <li>Traced 35-40% of measured variation to the gauge with a Gauge R&amp;R, then used SPC and DMAIC to raise Cpk from 0.46 to 1.49 and First-Pass Yield from 80% to 99.4%, eliminating $150K/year in scrap.</li>
+              <li>Built the FlexSim capacity case for a second pipe-bending machine (about 70% more capacity at the bottleneck), then wrote, ran, and signed off its FAT and SAT.</li>
             </ul>
           </div>
           <div className="home-experience__group">
-            <h3 className="home-experience__role">Senior Engineer, Uno Minda Limited</h3>
+            <h3 className="home-experience__role">Manufacturing Engineer, Uno Minda Limited</h3>
             <ul className="deck-list">
-              <li>Used Moldflow/DFM/DFMEA on injection-molded components to catch flow, cooling, and warpage risk pre-tooling.</li>
-              <li>Led pilot assembly-line/workstation layout improvements, cutting operator cycle time ~30%.</li>
+              <li>Supported APQP and PPAP launches of motorcycle switch assemblies for Yamaha, Suzuki, and Piaggio, owning the control plan, master sample, and checking-aids elements.</li>
+              <li>Designed a pilot production line to IATF 16949 requirements that ran about 30% faster than the required line speed.</li>
             </ul>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function Home() {
       <section className="section container cta-band hard-shadow">
         <div>
           <h2 className="cta-band__title">Have a process that needs to trust its own data?</h2>
-          <p>Let's talk about SPC systems, DFM screening, or turning a messy dataset into a control plan.</p>
+          <p>Let's talk about launching a line, fixing a yield problem, or turning a messy dataset into a control plan.</p>
         </div>
         <Link to="/contact" className="btn btn-gold">Get In Touch</Link>
       </section>

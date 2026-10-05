@@ -1,11 +1,11 @@
 export const stonewall = {
   slug: 'stonewall-systems-engineering',
   datePublished: '2025',
-  tag: 'IDEF0 / VSM / Balanced Scorecard',
+  tag: 'IDEF0 / Viable System Model / Balanced Scorecard',
   title: 'Organizational Design for a Startup Manufacturer',
   subtitle: 'Stonewall Supply Inc. Case Study — Texas A&M ISEN 663',
   headline: '5 SE Frameworks, One Viable Organization',
-  role: 'Team of 4 — Samyak Jain, Aaryan Ghadiyaram, Cesar Medellin & Salma Pool',
+  role: 'Team of 4 (with Aaryan Ghadiyaram, Cesar Medellin & Salma Pool) · My part: the IDEF0 functional model and the KPI / Balanced Scorecard framework',
   company: 'Texas A&M University, Systems Engineering (ISEN 663)',
   summary:
     'Stonewall Supply Inc. is a case-study ammunition manufacturer founded in response to post-COVID supply shocks and price volatility. Our team of four took it from a blank-page scope definition to a fully specified, cybernetically viable organization — functional org chart, IDEF0 process model, Balanced Scorecard, Viable System Model, and a costed Management Control System package — using Texas A&M’s formal systems-engineering design sequence.',
@@ -158,7 +158,7 @@ export const stonewall = {
       type: 'diagram',
       eyebrow: 'Viable System Model',
       title: 'Five systems, one cybernetically viable organization',
-      body: 'Stafford Beer’s VSM decomposes the company into five interacting systems, modeled at the whole-company level (SIF) and then one level down inside the Production & Logistics subsystem (SIF⁺¹) — the same structure recurring at a smaller scale.',
+      body: 'Stafford Beer’s Viable System Model decomposes the company into five interacting systems, modeled at the whole-company level (SIF) and then one level down inside the Production & Logistics subsystem (SIF⁺¹) — the same structure recurring at a smaller scale.',
       loop: true,
       diagram: [
         { label: 'S1: Operations', state: 'flow', note: 'Production line supervisors — manufacture, inspect, package, deliver' },
@@ -209,8 +209,8 @@ export const stonewall = {
       title: 'Systems-engineering rigor applied to organizational design',
       items: [
         'Formal SE methodology — IPO→N→R→SA→AoA→artifacts, not an ad hoc org chart',
-        'Multi-framework fluency — IDEF0, Balanced Scorecard, VSM, LOC, and MCS applied coherently to one system',
-        'Nested systems thinking — the same VSM structure holds at the company level and one level down inside a department',
+        'Multi-framework fluency — the team applied IDEF0, a Balanced Scorecard, the Viable System Model, Levers of Control, and an MCS package to one system; I built the IDEF0 model and the scorecard',
+        'Nested systems thinking — the same Viable System Model structure holds at the company level and one level down inside a department',
         'Cost-conscious design — every control tied to an implementation/maintenance cost and a mitigation for its own risk',
       ],
     },

@@ -35,8 +35,8 @@ export default function Contact() {
         <span className="eyebrow">Contact</span>
         <h1 className="section-title" style={{ marginBottom: 16 }}>Send a Message</h1>
         <p>
-          Hiring for a quality/process role, want to talk SPC systems, or just have
-          questions about a project above? Drop a note — I read everything that comes
+          Hiring for a manufacturing, quality, or process role, or have questions
+          about one of the projects? Drop a note. I read everything that comes
           through here.
         </p>
         <ul className="contact__direct">

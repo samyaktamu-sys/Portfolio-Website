@@ -4,13 +4,13 @@ export const baja = {
   tag: 'CAE / FEA / Vehicle Design',
   title: 'BAJA SAE — Brakes & Roll Cage',
   subtitle: 'Collegiate Off-Road Vehicle Team, 2019–2020',
-  headline: 'Full Brake System Design + Roll Cage FEA Sign-Off',
+  headline: 'Brake System Designed, Built + Roll Cage FEA Sign-Off',
   role: 'Brake System Design & CAE',
   company: 'Guru Gobind Singh Indraprastha University, Delhi, India',
   summary:
-    'An early hands-on engineering project: I owned the braking system for the team’s single-seat off-road car end to end, modelled it in SolidWorks, and used Ansys for the CAE work. I also ran the structural stress analysis that qualified the roll cage against the competition’s impact and rollover load cases. Detailed calculations and test data from that season are no longer in hand, so this is scoped to what I can still stand behind.',
+    'An early hands-on engineering project: I owned the braking system for the team’s single-seat off-road car end to end, modelled it in SolidWorks, then built and assembled it myself. I also ran the structural stress analysis in Ansys that qualified the roll cage against the competition’s impact and rollover load cases, and worked on the engine with the powertrain team. Detailed calculations and test data from that season are no longer in hand, so this is scoped to what I can still stand behind.',
   heroStats: [
-    { value: 'End-to-end', label: 'Brake System Ownership' },
+    { value: 'Design → Build', label: 'Brake System Ownership' },
     { value: 'SolidWorks', label: 'CAD / Assembly Modelling' },
     { value: 'Ansys', label: 'CAE / Structural FEA' },
     { value: 'Roll Cage', label: 'FEA-Qualified Structure' },
@@ -52,11 +52,34 @@ export const baja = {
       ],
     },
     {
+      type: 'twocol',
+      eyebrow: 'Hands-On',
+      title: 'Built it, not just modeled it',
+      left: {
+        heading: 'Fabrication and assembly',
+        items: [
+          'Physically built and assembled the hydraulic brake system I designed',
+          'Machined parts on the drill press, mill, lathe, saw, and grinder',
+          'Hands-on sheet metal work on the car',
+          'Checked assembly gaps and clearances with feeler gauges',
+        ],
+      },
+      right: {
+        heading: 'Engine, with the powertrain team',
+        items: [
+          'Briggs & Stratton 10 HP Model 19 engine',
+          'CVT tuning to the engine’s power band',
+          'Governor and RPM settings, carburetor adjustment',
+          'Routine servicing and performance testing',
+        ],
+      },
+    },
+    {
       type: 'close',
       eyebrow: 'What This Project Demonstrates',
       title: 'Where the CAD and CAE habits started',
       items: [
-        'End-to-end ownership of a vehicle subsystem, not just a single part',
+        'End-to-end ownership of a vehicle subsystem, from CAD to a brake system I built and assembled myself',
         'Working SolidWorks fluency built on real assemblies, not tutorials',
         'Structural FEA in Ansys tied to explicit pass/fail load cases',
         'Early exposure to designing against a written requirements spec',

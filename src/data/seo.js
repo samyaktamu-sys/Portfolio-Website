@@ -6,8 +6,8 @@ export const SITE_URL = (
 ).replace(/\/$/, '')
 
 export const AUTHOR = 'Samyak Jain'
-export const SITE_NAME = 'Samyak Jain — Quality & Process Engineering'
-export const OG_IMAGE = `${SITE_URL}/og-image.jpg?v=2`
+export const SITE_NAME = 'Samyak Jain — Manufacturing & Quality Engineering'
+export const OG_IMAGE = `${SITE_URL}/og-image.jpg?v=3`
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/samyak-delhi'
 export const EMAIL = 'samyak.tamu@gmail.com'
 
@@ -19,27 +19,27 @@ const abs = (path) => `${SITE_URL}${path === '/' ? '/' : path}`
 
 const pages = {
   '/': {
-    title: 'Samyak Jain — Quality & Process Engineer | SPC & DMAIC',
+    title: 'Samyak Jain — Manufacturing & Quality Engineer | NPI & SPC',
     description:
-      'Quality & Process Engineer specializing in SPC, DMAIC, and multivariate process analytics — Cpk recovery, first-pass yield, and root cause analysis.',
+      'Manufacturing and quality engineer: APQP/PPAP launches, SPC and DMAIC yield recovery (Cpk 0.46 to 1.49), FlexSim capacity cases, and plant analytics.',
     priority: '1.0',
   },
   '/about': {
     title: 'About Samyak Jain — Six Sigma Green Belt, MS IE Texas A&M',
     description:
-      'ISO 9001 / IATF 16949 internal auditor and Six Sigma Green Belt, MS Industrial Engineering at Texas A&M. SPC, DMAIC, APQP/PPAP, and control plans.',
+      'ISO 9001 / IATF 16949 internal auditor and Six Sigma Green Belt, MS Industrial Engineering at Texas A&M. APQP/PPAP, SPC, DMAIC, control plans, FlexSim.',
     priority: '0.8',
   },
   '/projects': {
-    title: 'Projects — SPC, DMAIC & Process Engineering Case Studies',
+    title: 'Projects — Manufacturing, Quality & Analytics Case Studies',
     description:
-      'Eight case studies in SPC, DMAIC, DFM and structural simulation, and multivariate analytics — yield recovery, Moldflow, roll-cage FEA, and PCA monitoring.',
+      'Eleven case studies: pipe-bending yield recovery, a pilot line launch, a FlexSim capacity case, neural-network inspection, demand forecasting, and more.',
     priority: '0.9',
   },
   '/contact': {
-    title: 'Contact Samyak Jain — Quality & Process Engineer',
+    title: 'Contact Samyak Jain — Manufacturing & Quality Engineer',
     description:
-      'Get in touch with Samyak Jain about quality and process engineering roles, SPC system design, DFM screening, or turning a dataset into a control plan.',
+      'Get in touch with Samyak Jain about manufacturing, quality, and process engineering roles, line launches, yield problems, or turning data into a control plan.',
     priority: '0.7',
   },
 }
@@ -48,15 +48,21 @@ const pages = {
 // (~155 chars). Falls back to a trimmed project summary if a slug is missing.
 const projectDescriptions = {
   'fpy-spc-improvement':
-    'DMAIC case study: pipe-bending first-pass yield from 80% to 99.4%, Cpk from 0.46 to 1.49, held by a closed-loop SPC system. $150K/yr of scrap removed.',
-  'moldflow-dfm-feasibility':
-    'Moldflow DFM study across 50+ injection-molded parts — six simulation checks for warpage, weld line, and cooling risk settled a cold vs. hot runner call.',
+    'DMAIC case study: a Gauge R&R, then SPC, took a pipe-bending line from 80% to 99.4% first-pass yield and Cpk 0.46 to 1.49, removing $150K/yr of scrap.',
+  'second-machine-capacity-case':
+    'FlexSim capacity case for a second pipe-bending machine during a plant move: about 70% more capacity at the bottleneck, then FAT and SAT sign-off.',
+  'pilot-line-launch':
+    'NPI case study: a pilot assembly line for motorcycle switches, built to IATF 16949 with vision checks and Kanban, ran about 30% faster than required.',
+  'neural-networks-inspection-yield':
+    'Neural networks on two manufacturing problems: a CNN tile inspector at 0.986 ROC-AUC, and a yield model that fails honest rolling-origin validation.',
+  'demand-forecasting-safety-stock':
+    'Walmart M5 demand forecasting carried through to safety stock: gradient boosting beat seasonal-naive on 35 of 36 series and cut carrying cost 20%.',
   'mspc-pca-monitoring':
-    'Multivariate SPC case study: PCA reduced 209 correlated process variables to 24 principal components and a 494-sample in-control baseline for T² monitoring.',
-  'ml-process-analytics':
-    'Statistical learning case study: Lasso vs. Random Forest vs. XGBoost across 151 predictors, ranked by LOOCV and AIC/BIC, then reversed by the test set.',
+    'Multivariate SPC case study: PCA reduced 209 correlated process variables to 24 principal components and a 494-sample in-control Phase I baseline.',
+  'mask-wearing-model-selection':
+    'Statistical learning case study: Lasso vs. Random Forest vs. XGBoost on 151 survey predictors, ranked by LOOCV, then reversed by a held-out test.',
   'stonewall-systems-engineering':
-    "Systems engineering case study: designing a manufacturer's organization with IDEF0, value stream mapping, a Balanced Scorecard, and the Viable System Model.",
+    "Systems engineering case study: designing a manufacturer's organization with IDEF0, a Balanced Scorecard, and the Viable System Model.",
   'beer-game-bullwhip':
     'Beer Distribution Game case study on the bullwhip effect — how a 523-unit demand blip became 1,000-unit order swings across four supply chain echelons.',
   'airline-passenger-forecasting':
@@ -84,9 +90,9 @@ const personSchema = {
   url: `${SITE_URL}/`,
   image: OG_IMAGE,
   email: `mailto:${EMAIL}`,
-  jobTitle: 'Quality & Process Engineer',
+  jobTitle: 'Manufacturing & Quality Engineer',
   description:
-    'Quality & Process Engineer specializing in statistical process control, DMAIC problem solving, and multivariate process analytics, with ISO 9001 and IATF 16949 internal-auditor credentials.',
+    'Manufacturing and quality engineer with automotive NPI launch experience (APQP/PPAP), SPC and DMAIC process improvement, capacity simulation, and ISO 9001 and IATF 16949 internal-auditor credentials.',
   // Add any additional public profiles (GitHub, ORCID, personal domain) here —
   // more verified sameAs links strengthen entity disambiguation in search.
   sameAs: [LINKEDIN_URL],
@@ -102,10 +108,10 @@ const personSchema = {
   },
   hasOccupation: {
     '@type': 'Occupation',
-    name: 'Quality & Process Engineer',
+    name: 'Manufacturing & Quality Engineer',
     occupationalCategory: '17-2112.00', // O*NET-SOC — Industrial Engineers
     skills:
-      'Statistical process control, DMAIC, ISO 9001 and IATF 16949 internal auditing, APQP, PPAP, manufacturing control plans, DFMEA/PFMEA, GD&T, process capability analysis, discrete-event simulation.',
+      'APQP, PPAP, statistical process control, DMAIC, Gauge R&R, ISO 9001 and IATF 16949 internal auditing, manufacturing control plans, DFMEA/PFMEA, value stream mapping, FlexSim discrete-event simulation, Power BI.',
   },
   alumniOf: [
     { '@type': 'CollegeOrUniversity', name: 'Texas A&M University', sameAs: 'https://www.tamu.edu/' },
@@ -151,8 +157,10 @@ const personSchema = {
     },
   ],
   knowsAbout: [
+    'New Product Introduction (NPI)',
     'Statistical Process Control',
     'DMAIC',
+    'Gauge R&R (MSA)',
     'Six Sigma',
     'Quality Management Systems (ISO 9001)',
     'IATF 16949',
@@ -168,6 +176,9 @@ const personSchema = {
     'Multivariate Statistical Process Control',
     'Design for Manufacturability',
     'Discrete-Event Simulation',
+    'Theory of Constraints',
+    'Demand Forecasting',
+    'Machine Learning',
     'Finite Element Analysis',
     'Lean Manufacturing',
   ],
@@ -355,13 +366,13 @@ export function seoTags(pathname) {
     { el: 'meta', attrs: { property: 'og:image:type', content: 'image/jpeg' } },
     { el: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
     { el: 'meta', attrs: { property: 'og:image:height', content: '630' } },
-    { el: 'meta', attrs: { property: 'og:image:alt', content: `${AUTHOR} — Quality & Process Engineering portfolio` } },
+    { el: 'meta', attrs: { property: 'og:image:alt', content: `${AUTHOR} — Manufacturing & Quality Engineering portfolio` } },
 
     { el: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
     { el: 'meta', attrs: { name: 'twitter:title', content: meta.title } },
     { el: 'meta', attrs: { name: 'twitter:description', content: meta.description } },
     { el: 'meta', attrs: { name: 'twitter:image', content: OG_IMAGE } },
-    { el: 'meta', attrs: { name: 'twitter:image:alt', content: `${AUTHOR} — Quality & Process Engineering portfolio` } },
+    { el: 'meta', attrs: { name: 'twitter:image:alt', content: `${AUTHOR} — Manufacturing & Quality Engineering portfolio` } },
   ]
 
   // Article-namespace tags for the project case studies (og:type is already

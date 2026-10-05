@@ -55,7 +55,7 @@ export const beergame = {
     },
     {
       type: 'twocol',
-      eyebrow: 'Retailer Analysis — Samyak',
+      eyebrow: 'Retailer Analysis — My Role',
       title: 'Reacted late, then overcorrected for good',
       left: {
         heading: 'Failures',
@@ -78,7 +78,7 @@ export const beergame = {
     },
     {
       type: 'twocol',
-      eyebrow: 'Wholesaler Analysis — Archit',
+      eyebrow: 'Wholesaler Analysis',
       title: 'Orders swinging from 850 to 350 to 1,000',
       left: {
         heading: 'Failures',
@@ -101,7 +101,7 @@ export const beergame = {
     },
     {
       type: 'twocol',
-      eyebrow: 'Distributor Analysis — FreeHal',
+      eyebrow: 'Distributor Analysis',
       title: 'Too slow early, too fast late — surplus went +400 to −167',
       left: {
         heading: 'Failures',
@@ -124,7 +124,7 @@ export const beergame = {
     },
     {
       type: 'twocol',
-      eyebrow: 'Brewery Analysis — Alex',
+      eyebrow: 'Brewery Analysis',
       title: 'Highest cost, most inconsistent production in the chain',
       left: {
         heading: 'Failures',

@@ -6,17 +6,16 @@ import aicBic from '../../assets/charts/mask/aic_bic_comparison.png'
 import testPred from '../../assets/charts/mask/test_true_vs_pred.png'
 
 export const ml = {
-  slug: 'ml-process-analytics',
-  featured: true,
+  slug: 'mask-wearing-model-selection',
   datePublished: '2025',
   tag: 'Statistical Learning / Model Selection',
-  title: 'Predicting Behavior: Lasso vs. RF vs. XGBoost',
-  subtitle: '151 Predictors, LOOCV-Driven Model Comparison — Texas A&M ISEN 613',
+  title: 'Mask-Wearing Model: Lasso vs. RF vs. XGBoost',
+  subtitle: '151 Survey Predictors, LOOCV-Driven Model Comparison — Texas A&M ISEN 613',
   headline: 'Phase I Pick Reversed by the Test Set',
-  role: 'Co-author — Samyak Jain & Advait Pisal',
+  role: 'Team of 2, built in R · I did the data prep, modeling, tuning, and evaluation; Advait Pisal wrote the report',
   company: 'Texas A&M University, Statistical Learning',
   summary:
-    'A classic wide-and-short dataset: 151 predictors, 172 rows. Lasso, Random Forest, and XGBoost were compared with LOOCV and AIC/BIC — not just training error — and the documented Phase I choice was revised when 59 held-out students disagreed with it.',
+    'A classic wide-and-short dataset: 151 predictors, 172 rows. Lasso, Random Forest, and XGBoost were compared on leave-one-out cross-validation error and overfitting gap, not just training error, and the documented Phase I choice was revised when 59 held-out students disagreed with it.',
   heroStats: [
     { value: '151 → 29', label: 'Predictors → Lasso-Selected' },
     { value: '172 / 59', label: 'Train / Held-Out Test' },
@@ -111,14 +110,14 @@ export const ml = {
       eyebrow: 'Model Comparison — Phase I',
       title: 'AIC / BIC vs. LOOCV error',
       image: aicBic,
-      caption: 'Similar LOOCV error, very different complexity penalties. Phase I pick: Lasso — lowest AIC/BIC and overfit gap, while still interpretable.',
+      caption: 'Similar LOOCV error across all three. Phase I pick: Lasso, for the smallest overfit gap while staying interpretable. A caveat on this chart: AIC and BIC are likelihood-based, so they are only well defined for Lasso. The fair comparison for the tree models is LOOCV error and the held-out test, which is where the pick changed.',
     },
     {
       type: 'image',
       eyebrow: 'Phase II — Held-Out Test',
       title: 'Predicted vs. true, 59 new students',
       image: testPred,
-      caption: 'Test error (15 misclassified) beat the ≈29-error LOOCV estimate — the cross-validation was reliable, not overfit. Error pattern was adjacent-only: no Rarely↔Always jumps.',
+      caption: 'Lasso misclassified 15 of 59 new students, fewer than its LOOCV error suggested, so it held up on unseen data rather than collapsing. Every miss was to an adjacent class: no Rarely↔Always jumps.',
     },
     {
       type: 'twocol',
@@ -136,7 +135,7 @@ export const ml = {
       right: {
         heading: 'Random Forest (revised choice)',
         items: [
-          '12 of 59 test errors — 20% fewer than Lasso',
+          '12 of 59 test errors, vs. 15 for Lasso',
           'Test MSE: 0.203 — a 20% reduction',
           'Test accuracy: 79.7%',
           'Gains specifically on the hardest adjacent calls',
@@ -148,8 +147,8 @@ export const ml = {
       eyebrow: 'What This Project Demonstrates',
       title: 'Willing to revise a documented decision',
       items: [
-        'Rigorous comparison — LOOCV, AIC/BIC, and overfit gaps, not just training error',
-        'Revised a documented Phase I decision when held-out test data disagreed with it',
+        'Rigorous comparison — LOOCV error and overfit gaps, not just training error',
+        'Revised a documented Phase I decision when held-out data disagreed, while noting 12 vs. 15 errors on 59 students is a small gap',
         'Comfortable across linear and ensemble methods',
         'Weighed interpretability vs. accuracy explicitly, instead of picking one by default',
       ],

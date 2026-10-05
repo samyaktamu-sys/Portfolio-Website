@@ -1,6 +1,10 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/projects/ml-process-analytics", "destination": "/projects/mask-wearing-model-selection", "permanent": true },
+    { "source": "/projects/moldflow-dfm-feasibility", "destination": "/projects", "permanent": false }
+  ],
   "rewrites": [{ "source": "/((?!.*\\.).*)", "destination": "/index.html" }],
   "headers": [
     {

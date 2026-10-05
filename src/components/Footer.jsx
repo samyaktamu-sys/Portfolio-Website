@@ -7,8 +7,8 @@ export default function Footer() {
       <div className="stripes site-footer__bar" />
       <div className="container site-footer__inner">
         <div>
-          <h3 className="site-footer__title">Let's talk quality.</h3>
-          <p className="site-footer__sub">SPC · DMAIC · Multivariate Process Analytics</p>
+          <h3 className="site-footer__title">Let's talk manufacturing.</h3>
+          <p className="site-footer__sub">NPI · APQP/PPAP · SPC/DMAIC · Analytics</p>
         </div>
         <ul className="site-footer__links">
           <li>

@@ -48,7 +48,7 @@ export const forecasting = {
       stats: [
         { value: '12.06%', label: '12-Month MA — MAPE' },
         { value: '11.42%', label: 'Linear Trend — MAPE' },
-        { value: '4.76%', label: 'Seasonal-Trend — MAPE' },
+        { value: '4.76%', label: 'Seasonal-Trend — MAPE (In-Sample)' },
         { value: '27.07', label: 'Seasonal-Trend — RMSE' },
       ],
     },
@@ -80,7 +80,7 @@ export const forecasting = {
         { value: '616', label: 'Peak Month — August' },
         { value: '399', label: 'Low Month — February' },
         { value: '2.66/mo', label: 'Underlying Trend Growth' },
-        { value: '4.76%', label: 'Expected MAPE' },
+        { value: '4.76%', label: 'In-Sample Fit MAPE' },
       ],
     },
     {
@@ -90,7 +90,7 @@ export const forecasting = {
       items: [
         'Model comparison discipline — MAE/RMSE/MAPE scored across five methods before picking a winner',
         'Decomposition over blunt smoothing — isolating trend and seasonality beat a moving average by more than 2x',
-        'Forecast validation — extrapolated the winning model a full year forward with a stated accuracy expectation',
+        'Forecasting forward — extrapolated the winning model a full year; the 4.76% MAPE is in-sample fit, so scoring it on a held-out year is the natural next check',
       ],
     },
   ],

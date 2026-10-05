@@ -13,41 +13,51 @@ const education = [
 
 const experience = [
   {
-    role: 'Lab Technician — Chemistry Department',
+    role: 'Lab Technician, Chemistry Department',
     org: 'Texas A&M University, College Station, TX',
     date: '01/2025 – 05/2026',
     bullets: [
-      'Supported fume hood installation/maintenance, verifying airflow and safety performance after commissioning.',
-      'Operated glovebox systems in ISO-classified controlled environments, enforcing contamination-control protocols.',
-      'Led a materials safety upgrade replacing mercury bubblers with sand-based alternatives, zero disruption to ops.',
-      'Ran routine inspections, preventive maintenance, and documentation for controlled-environment equipment to hold departmental compliance.',
+      'Supported installation and maintenance of chemical fume hoods, coordinating with vendors and verifying airflow and safety system performance after commissioning.',
+      'Installed and tested Schlenk line vacuum and inert-gas systems during lab setup; leak-checked them with vacuum-hold tests and the gloveboxes with pressure-hold tests.',
+      'Operated and maintained inert-atmosphere glovebox systems in controlled environments, enforcing contamination-control protocols and atmosphere integrity.',
+      'Led a materials safety upgrade replacing mercury bubblers with mercury-free alternatives across lab setups, with zero disruption to ongoing work.',
+      'Rebuilt the lab’s inventory system for 1,000+ chemical containers, applying 5S (labeling, sorting, set locations) and training all scientists on check-out and return discipline, making retrieval faster and more reliable.',
+      'Ran periodic inspections of fume hoods, eyewash stations, and safety showers, and planned new glovebox and fume hood placement around fire safety and evacuation routes.',
     ],
   },
   {
-    role: 'Senior Engineer',
+    role: 'Project Engineer',
     org: 'Utility Power Systems, Delhi, India',
     date: '01/2023 – 07/2024',
     bullets: [
-      'Recovered process capability (Cpk 0.46 → 1.49) on the pipe-bending line via DMAIC and closed-loop SPC, lifting FPY from 80% to 99.4% and eliminating ~$150K/yr in scrap.',
-      'Implemented ISO 9001 Clause 8–10 controls during a facility migration — built the manufacturing control plans and internal audit schedule (inspection points, reaction plans, audit frequency) with ops and quality on the floor.',
-      'Redesigned workstations with OSHA-aligned machine guarding, ergonomics, and PPE/hazard communication as part of a motion study, cutting end-to-end lead time ~20%.',
-      'Planned plant and line layouts in AutoCAD and built a FlexSim discrete-event model with PFMEA-informed downtime modes for bottleneck and capacity analysis.',
-      'Wrote SOPs and standard work for welding, blasting, galvanization, and powder coating under ISO 9001 Clause 8.5; applied GD&T to review fabrication drawings.',
-      'Built Power BI dashboards for FPY, OEE, inventory, defects, and on-time delivery.',
+      'Owned quality for the pipe-bending line: a Gauge R&R traced 35-40% of observed variation to inconsistent operator measurement; after fixing it, SPC and DMAIC raised Cpk from 0.46 to 1.49 and First-Pass Yield from 80% to 99.4%, eliminating $150K/year in scrap.',
+      'Used Theory of Constraints to target the pipe-bending bottleneck, applying SMED and planned maintenance to raise its output about 20% (bends per day); with the yield work, OEE rose from about 45% to 65%.',
+      'Built a FlexSim discrete-event simulation of layout, buffer, and staffing scenarios against a 25-30% projected demand increase, showing a second machine would add about 70% capacity, which supported approval of the second pipe-bending machine.',
+      'Wrote, ran, and signed off the FAT at the OEM and the SAT at the plant for the second pipe-bending machine, covering bend accuracy on sample parts, machine safety, and hydraulics and controls.',
+      'Built the plant’s first real-time production dataset by training operators to log each part at every station in Odoo, then built Power BI dashboards (SQL, DirectQuery to the ERP’s PostgreSQL database) for First-Pass Yield, OEE, defects, inventory, and on-time delivery.',
+      'Helped implement ISO 9001 Clauses 8–10 during a facility migration: built manufacturing control plans and the internal audit schedule, wrote SOPs for welding, blasting, galvanizing, and powder coating, and ran layered process audits on the line.',
+      'Planned plant and line layouts in AutoCAD, designing straight-line pipe flow so pipes never had to be rotated between operations; the layout needed about 800 sq ft less floor space than the alternative considered.',
+      'Supervised and assigned daily work to 20+ operators on a CNC hydraulic pipe-bending line, training them on SOPs and work instructions.',
+      'Resolved customer field-failure escalations: delivered the rework the customer needed on site, traced each failure to its originating process, and put corrective actions such as poka-yoke in place so it could not recur.',
+      'Qualified alternate suppliers against ISO 9001 and IBR requirements, set AQL sampling plans for incoming material, and issued supplier corrective actions and followed them to closure.',
     ],
   },
   {
-    role: 'Senior Engineer',
+    role: 'Manufacturing Engineer',
     org: 'Uno Minda Limited, Haryana, India',
     date: '01/2022 – 01/2023',
     bullets: [
-      'Supported APQP/PPAP launch of high-volume motorcycle switch assemblies for Yamaha, Suzuki, and Piaggio, coordinating design, manufacturing, quality, logistics, and suppliers.',
-      'Designed a pilot production line to IATF 16949 process requirements, translating design specs into repeatable workstation setups and cutting operator cycle time ~30%.',
-      'Reviewed 25+ assembly lines for IATF 16949 conformance ahead of certification, and managed ECN and SAP configuration to keep BOMs and routings aligned with design intent.',
-      'Ran DFMEA/PFMEA across 8 designs, catching 20+ potential failure modes and cutting design-stage issues ~30% before tooling release.',
-      'Used Moldflow and DFM reviews on 100+ injection-molded components to catch flow, cooling, and warpage risk pre-tooling.',
-      'Designed wire-harness routing and layout for the switch assemblies — connector and terminal selection, crimp specification, and end-of-line continuity and pull-force testing.',
-      'Executed 37 Kaizen and Lean initiatives, contributing to a 4–5% cost reduction in targeted assemblies.',
+      'Supported APQP and PPAP launches of high-volume motorcycle switch assemblies for Yamaha, Suzuki, and Piaggio, owning the control plan, sample production parts, master sample, and checking-aids elements.',
+      'Designed a pilot production line to IATF 16949 requirements, owning the process flow chart, floor plan layout, routing, SOPs, and operator skill matrix, using value stream mapping and Yamazumi charts; the line ran about 30% faster than the required speed.',
+      'Chose vision-inspection stations for the new line and wrote the vision checks and NG-bin scan interlock into the PFMEA and control plan, so a station would not scan the next part until the NG part was in the reject bin.',
+      'As PFMEA action owner on a PFMEA led by the engineering manager, and contributing the manufacturing view in DFMEA reviews across 8 product designs, helped catch 20+ potential failure modes and cut design-stage issues about 30% before tooling release.',
+      'Reviewed 25+ assembly lines for conformance to IATF 16949 requirements ahead of certification, working with production and quality to close gaps in documentation and process control.',
+      'Owned engineering change management and document control for 25+ product lines in SAP (BOMs, routings, ECRs), self-initiating several ECRNs to make assembly easier for operators.',
+      'Resolved a rivet-height defect through an 8D, tracing it with 5 Why to riveting-station tooling, and presented the fix to the customer on a one-page A3.',
+      'Designed wire-harness routing and layout for the switch assemblies, including connector and terminal selection, crimp specification, poka-yoke built into the harness design, end-of-line continuity testing, and crimp pull-force testing.',
+      'Read CAN and LIN bus messages to diagnose switch units that failed end-of-line functional tests.',
+      'Owned 20+ of the plant’s 37 Kaizen and Lean initiatives, projecting and then verifying cycle-time, quality, and cost impact, contributing to about 4–5% cost reduction in targeted assemblies.',
+      'Used Moldflow simulation and DFM reviews on 100+ injection-molded components during design to predict flow, cooling, and warpage defects early.',
     ],
   },
   {
@@ -55,20 +65,21 @@ const experience = [
     org: 'Boiler Components Mfg. Co., Delhi, India',
     date: '03/2020 – 08/2020',
     bullets: [
-      '2D drafting of new consignments on AutoCAD; oversaw fabrication execution per drawing.',
-      'Foundational grounding in Lean Manufacturing and Just-In-Time (JIT) technique.',
+      'Drafted new consignments in 2D on AutoCAD and oversaw fabrication against the drawings.',
+      'Built a foundation in Lean Manufacturing and Just-In-Time (JIT).',
     ],
   },
 ]
 
 const skills = [
-  { group: 'Standards & Compliance', items: ['ISO 9001 Internal Auditor', 'IATF 16949 Internal Auditor', 'OSHA-aligned machine guarding', 'Ergonomics', 'PPE / hazard communication'] },
-  { group: 'Quality & Problem Solving', items: ['APQP', 'PPAP', 'Manufacturing control plans', 'Internal audit scheduling', 'DFMEA', 'PFMEA', 'DMAIC', 'SPC', 'Root-cause analysis', 'GD&T', 'Cpk / FPY improvement'] },
-  { group: 'Continuous Improvement', items: ['Six Sigma Green Belt', 'PMP (in progress)', 'Kaizen', 'Lean Manufacturing', 'PDCA', 'Just-in-Time'] },
-  { group: 'Industrial Engineering', items: ['Line/plant layouts', 'Capacity modeling', 'Time studies', 'Line balancing', 'Workstation design', 'PFEP', 'Material-flow planning'] },
-  { group: 'Simulation & Analytics', items: ['FlexSim', 'JaamSim', 'Power BI', 'Excel (advanced)', 'Python', 'SQL', 'Minitab', 'Tableau'] },
-  { group: 'Systems & Design', items: ['SolidWorks', 'AutoCAD', 'CATIA', 'Ansys', 'SAP', 'Moldflow'] },
-  { group: 'Manufacturing Processes', items: ['High-volume assembly', 'Wire-harness assembly', 'Welding', 'Bending / forming', 'Blasting', 'Galvanization', 'Powder coating', 'Injection molding', '3D-printed fixtures'] },
+  { group: 'Standards & Compliance', items: ['ISO 9001 Internal Auditor', 'IATF 16949 Internal Auditor', 'Layered process audits', 'Machine guarding', 'Ergonomics', 'PPE / hazard communication', 'LOTO'] },
+  { group: 'Quality & Problem Solving', items: ['APQP', 'PPAP', 'Control plans', 'DFMEA', 'PFMEA', '8D', 'DMAIC', '5 Why', 'Fishbone', 'A3', 'SPC', 'Gauge R&R (MSA)', 'ANOVA', 'Cpk / First-Pass Yield', 'AQL sampling', 'FAT / SAT', 'GD&T', 'Vision inspection & traceability'] },
+  { group: 'Lean & Continuous Improvement', items: ['Six Sigma Green Belt', 'PMP (in progress)', 'Kaizen', 'Value stream mapping', 'SMED', 'Theory of Constraints', 'Kanban', '5S', 'Yamazumi charts', 'Gemba walks', 'Just-in-Time'] },
+  { group: 'Industrial Engineering', items: ['Line & plant layouts', 'Capacity modeling', 'Discrete-event simulation', 'Time studies', 'Line balancing', 'Workstation design', 'PFEP', 'Milk runs', 'Critical path method', 'MS Project'] },
+  { group: 'Data & Analytics', items: ['Power BI', 'SQL', 'Excel (advanced)', 'VBA', 'JMP (project-level)', 'R', 'MATLAB', 'Python (coursework)', 'Minitab (coursework)', 'AI agents (Claude Code)'] },
+  { group: 'Machine Learning (project-level)', items: ['Lasso', 'Random forest', 'Gradient boosting', 'CNNs & transfer learning', 'Grad-CAM', 'PCA', 'Rolling-origin validation'] },
+  { group: 'Systems & Design', items: ['SAP', 'Odoo ERP', 'FlexSim', 'JaamSim', 'AutoCAD', 'SolidWorks', 'Creo', 'CATIA (customer models)', 'Ansys', 'Moldflow', 'Visio'] },
+  { group: 'Manufacturing Processes', items: ['High-volume assembly', 'Wire harness (crimp, continuity, pull-force)', 'CAN / LIN end-of-line test review', 'Hand soldering', 'Pipe bending / forming', 'Weld fixtures & weld inspection', 'Blasting', 'Galvanizing', 'Powder coating', 'Sheet metal', 'Injection-molded components'] },
 ]
 
 export default function About() {
@@ -78,15 +89,16 @@ export default function About() {
         <div>
           <span className="eyebrow">About</span>
           <h1 className="section-title" style={{ marginBottom: 18 }}>
-            Quality engineering, not vibes.
+            Manufacturing &amp; quality engineering, not vibes.
           </h1>
           <p className="about-hero__lead">
-            I'm a Quality &amp; Process Engineer with an MS in Industrial Engineering
-            from Texas A&M. Six Sigma Green Belt and ISO 9001 / IATF 16949 internal
-            auditor, three-plus years turning shaky manufacturing processes into ones
-            that police themselves — SPC dashboards, DMAIC investigations, APQP/PPAP
-            launches, Moldflow DFM screens, and the occasional multivariate model when
-            a spreadsheet isn't rigorous enough.
+            I'm a manufacturing and quality engineer with an MS in Industrial
+            Engineering from Texas A&amp;M and an MBA. Six Sigma Green Belt and
+            ISO 9001 / IATF 16949 internal auditor, with 3+ years across
+            manufacturing engineering and lab roles: automotive launches with
+            APQP and PPAP, a pilot line that beat its required speed, SPC and
+            DMAIC on a pipe-bending bottleneck, and FlexSim and Power BI for the
+            capacity and data side.
           </p>
         </div>
         <div className="about-hero__photo hard-shadow-gold">
